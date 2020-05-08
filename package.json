@@ -1,0 +1,42 @@
+{
+  "name": "enp",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "electron-webpack dev",
+    "compile": "electron-webpack",
+    "dist": "yarn compile && electron-builder",
+    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null",
+    "pack": "yarn compile && electron-builder --dir",
+    "postinstall": "electron-builder install-app-deps",
+    "package:windows": "cross-env NODE_ENV=production electron-builder --win --x64 --ia32 --publish=never"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "cross-env": "^7.0.2",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.0.1",
+    "react-dom": "^16.13.1",
+    "source-map-support": "^0.5.19"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "electron": "8.2.0",
+    "electron-builder": "^22.4.1",
+    "electron-webpack": "^2.8.2",
+    "webpack": "~4.42.1"
+  },
+  "electronWebpack": {
+    "renderer": {
+      "webpackConfig": "webpack.renderer.config.js"
+    }
+  },
+  "build": {
+    "productName": "enp",
+    "appId": "Mattermost.enp"
+  }
+}
