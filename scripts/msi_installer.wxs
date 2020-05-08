@@ -65,12 +65,12 @@
             <Component Id="MainExecutableShortcutDesktop" Guid="9C71385D-C892-48BA-A35D-D89A661D2952" Win64="$(var.Win64)">
               <Condition><![CDATA[ADDDESKTOPSHORTCUT = "true"]]></Condition>
               <RegistryValue Id="RegShortcutDesktop" Root="HKLM" Key="SOFTWARE\Enp\Desktop\settings" Name="EnpDesktopShortcutDesktop" Value="1" Type="integer" KeyPath="yes" />
-              <Shortcut Id="EnpDesktopShortcutDesktop" Directory="EnpFolder" Name="Enp" WorkingDirectory="INSTALLDIR" Icon="Enp.ico" IconIndex="0" Advertise="no" Target="[INSTALLDIR]desktop_poc.exe" />
+              <Shortcut Id="EnpDesktopShortcutDesktop" Directory="EnpFolder" Name="Enp" WorkingDirectory="INSTALLDIR" Icon="Enp.ico" IconIndex="0" Advertise="no" Target="[INSTALLDIR]enp.exe" />
             </Component>
             <Component Id="MainExecutableShortcutStartMenu" Guid="DF2028FF-7E03-407B-A46A-726E1B67DF83" Win64="$(var.Win64)">
               <Condition><![CDATA[ADDSTARTMENUSHORTCUT = "true"]]></Condition>
               <RegistryValue Id="RegShortcutStartMenu" Root="HKCU" Key="SOFTWARE\Enp\Desktop\settings" Name="EnpDesktopShortcutStartMenu" Value="1" Type="integer" KeyPath="yes" />
-              <Shortcut Id="EnpDesktopShortcutStartMenu" Directory="ProgramMenuDir" Name="Enp" WorkingDirectory="INSTALLDIR" Icon="Enp.ico" IconIndex="0" Advertise="no" Target="[INSTALLDIR]desktop_poc.exe">
+              <Shortcut Id="EnpDesktopShortcutStartMenu" Directory="ProgramMenuDir" Name="Enp" WorkingDirectory="INSTALLDIR" Icon="Enp.ico" IconIndex="0" Advertise="no" Target="[INSTALLDIR]enp.exe">
                 <ShortcutProperty Key="System.AppUserModel.ID" Value="Mattermost.enp" />
                 <ShortcutProperty Key="System.AppUserModel.ToastActivatorCLSID" Value="{082F98DC-8BD8-4771-9D01-3A75930884D1}">
                 </ShortcutProperty>
@@ -117,7 +117,7 @@
       <Custom Action="LaunchApp" After="InstallFinalize">Installed</Custom>
     </InstallExecuteSequence>
     <CustomAction Id="LaunchApp" FileKey="EnpDesktopEXE" ExeCommand="" Return="asyncNoWait" />
-    <CustomAction Id="KillApp" Directory="INSTALLDIR" Return="ignore" ExeCommand="&quot;[SystemFolder]taskkill.exe&quot; /F /IM &quot;desktop_poc.exe&quot;" />
+    <CustomAction Id="KillApp" Directory="INSTALLDIR" Return="ignore" ExeCommand="&quot;[SystemFolder]taskkill.exe&quot; /F /IM &quot;enp.exe&quot;" />
     <Icon Id="Enp.ico" SourceFile="../resources/icon.ico" />
     <Property Id="ARPPRODUCTICON">Enp.ico</Property>
     <Property Id="ARPCONTACT">https://pre-release.enp.com</Property>

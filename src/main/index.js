@@ -73,3 +73,5 @@ ipcMain.handle('notify', (e, {message}) => {
   });
   return result;
 })
+
+app.setAppUserModelId('Mattermost.enp');

@@ -19,7 +19,7 @@
                 <File Id="fil74C30EBEB08AD69984405E221438C865" KeyPath="yes" Source="SourceDir\d3dcompiler_47.dll" />
             </Component>
             <Component Win64="yes" Id="cmp9D091DEF07FE8344C10B29D5E34E01C9" Directory="INSTALLDIR" Guid="{8ABA9848-39EA-4082-A152-3026502E517F}">
-                <File Id="fil62E1A16E8CEE27E7BF085E5BA7281842" KeyPath="yes" Source="SourceDir\desktop_poc.exe" />
+                <File Id="fil62E1A16E8CEE27E7BF085E5BA7281842" KeyPath="yes" Source="SourceDir\.exe" />
             </Component>
             <Component Win64="yes" Id="cmpDB457CEA22C6A6C2486436F004FEB234" Directory="INSTALLDIR" Guid="{31B73E61-7736-4A48-9234-5FAD93FB5A42}">
                 <File Id="fil3203085B8E08E788009DE158F2205D3E" KeyPath="yes" Source="SourceDir\ffmpeg.dll" />

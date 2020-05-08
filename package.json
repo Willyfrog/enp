@@ -1,6 +1,7 @@
 {
   "name": "enp",
   "version": "1.0.0",
+  "description": "Electron Notification Proyect",
   "license": "MIT",
   "scripts": {
     "dev": "electron-webpack dev",
@@ -37,6 +38,9 @@
   },
   "build": {
     "productName": "enp",
-    "appId": "Mattermost.enp"
+    "appId": "Mattermost.enp",
+    "win": {
+      "icon": "resources/icon.ico"
+    }
   }
 }

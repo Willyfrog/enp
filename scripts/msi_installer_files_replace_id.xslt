@@ -9,7 +9,7 @@ xmlns:wi="http://schemas.microsoft.com/wix/2006/wi">
   </xsl:template>
   
   <!-- src.: https://stackoverflow.com/a/19259647/3514658 -->
-  <xsl:template match="wi:ComponentGroup[@Id='EnpDesktopFiles']/wi:Component/wi:File[contains(@Source,'desktop_poc.exe')]">
+  <xsl:template match="wi:ComponentGroup[@Id='EnpDesktopFiles']/wi:Component/wi:File[contains(@Source,'enp.exe')]">
      <xsl:copy>
         <xsl:attribute name="Id">EnpDesktopEXE</xsl:attribute>
         <xsl:copy-of select="@*[name()!='Id']"/>
